@@ -1,11 +1,12 @@
 import React from 'react'
 import Navbar from "./Components/Navbar.jsx";
+import { Outlet } from "react-router-dom";
 
 const App = () => {
   return (
     <div>
       <Navbar />
-      <h1>Welcome to Online Library</h1>
+      <Outlet />
     </div>
   )
 }

@@ -8,21 +8,22 @@ import AddBook from './pages/AddBook'
 
 const router = createBrowserRouter([
   {
-    path : "",
-    element : <App />
-  },
-  { path: '/',
+    path : '/',
+    element : <App />,
+    children : [
+       { path: '',
      element: <Home /> 
     },
 
-  { path: '/books',
+  { path: 'books',
     element: <BrowseBooks /> 
   },
 
-  { path: '/add-book',
+  { path: 'add-book',
      element: <AddBook /> 
     },
-
+    ]
+  },
 ])
 
 ReactDOM.createRoot(document.getElementById('root')).render(
