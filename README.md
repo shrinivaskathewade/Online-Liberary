@@ -1,16 +1,70 @@
-# React + Vite
+# Online Library System - React Assignment 2
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## 📚 Project Overview
 
-Currently, two official plugins are available:
+This is a **React-based Online Library System** built as part of React Assignment 2 (100 Marks).  
+The application allows users to browse books by category, search for books, view detailed information about each book, and add new books using a form with Redux state management.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+**Tech Stack:**
+- React + React Router
+- Redux (for book state management)
+- CSS (responsive design, cards, shadows, hover effects)
+- Vite (React project setup)
 
-## React Compiler
+---
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## 📝 Features
 
-## Expanding the ESLint configuration
+### 1. Home Page
+- Welcome message and list of book categories (Fiction, Non-Fiction, Sci-Fi)
+- Display 4 popular books as cards
+- Navigation bar links: Home, Browse Books, Add Book
+- Modern UI with shadows, hover effects, and responsive layout
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+### 2. Browse Books Page
+- Filter books by category (`/books/:category`)
+- Search functionality by **title** or **author**
+- Display all book details in card format (image, title, author, category, rating, description)
+- "View Details" link for each book
+
+### 3. Book Details Page
+- Dynamic route (`/book/:id`) to display detailed info
+- Image, title, author, category, rating, description
+- "Back to Browse" link
+- Modern card with shadow and hover effects
+
+### 4. Add Book Page
+- Form to add new books (ID, Title, Author, Category, Rating, Cover Image, Description)
+- Form validation to ensure all fields are filled
+- Uses **Redux** to manage the book list
+- Redirects to Browse Books page after submission
+
+### 5. 404 Page
+- Dynamic "Page Not Found" for undefined routes
+- Shows invalid URL
+- Back to Home button
+- No navigation bar
+
+### 6. Styling & UX
+- Responsive design for mobile and desktop
+- Cards with shadows and hover effects
+- Buttons with hover transitions
+- Clean, professional developer-themed colors
+
+---
+
+
+github link :  https://github.com/shrinivaskathewade/Online-Liberary
+
+## 🚀 Setup & Installation
+
+1. **Clone the repository**
+```bash
+git clone <YOUR_GITHUB_REPO_URL>
+cd <REPO_FOLDER>
+npm install
+npm run dev
+ 
+
+
+
