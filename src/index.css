@@ -518,4 +518,42 @@
     max-width: 100%;
   }
 }
+/* ===== 404 Page ===== */
+.notfound-page {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 80vh;
+  text-align: center;
+  font-family: 'Segoe UI', sans-serif;
+  color: #1f2937;
+}
+
+.notfound-page h1 {
+  font-size: 3rem;
+  color: #ef4444; /* red */
+  margin-bottom: 20px;
+}
+
+.notfound-page p {
+  font-size: 1.2rem;
+  margin-bottom: 20px;
+}
+
+.notfound-page .back-home {
+  padding: 10px 20px;
+  background-color: #2563eb;
+  color: white;
+  text-decoration: none;
+  border-radius: 12px;
+  transition: all 0.3s ease;
+}
+
+.notfound-page .back-home:hover {
+  background-color: #1e40af;
+  box-shadow: 0 6px 18px rgba(37, 99, 235, 0.4);
+  transform: translateY(-2px);
+}
+
 
