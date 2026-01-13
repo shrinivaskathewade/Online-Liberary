@@ -45,7 +45,7 @@ const AddBook = () => {
   };
 
   return (
-    <div>
+    <div className="add-book-page">
       <h2>Add a New Book</h2>
       {error && <p style={{ color: 'red' }}>{error}</p>}
       <form onSubmit={handleSubmit}>
