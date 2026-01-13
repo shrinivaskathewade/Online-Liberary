@@ -1,0 +1,17 @@
+import { createSlice } from '@reduxjs/toolkit';
+import { books as initialBooks } from '../data/books';
+
+const booksSlice = createSlice({
+  name: 'books',
+  initialState: {
+    books: initialBooks,
+  },
+  reducers: {
+    addBook: (state, action) => {
+      state.books.unshift(action.payload); // add new book to top
+    },
+  },
+});
+
+export const { addBook } = booksSlice.actions;
+export default booksSlice.reducer;

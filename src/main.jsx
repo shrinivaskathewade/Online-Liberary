@@ -5,29 +5,50 @@ import App from './App'
 import Home from './pages/Home'
 import BrowseBooks from './pages/BrowseBooks'
 import AddBook from './pages/AddBook'
+import BookDetails from './pages/BookDetails'
+import './index.css'
+import { Provider } from 'react-redux';
+import { store } from './redux/store';
+import Error from './Components/error'
 
 const router = createBrowserRouter([
   {
-    path : '/',
-    element : <App />,
-    children : [
-       { path: '',
-     element: <Home /> 
-    },
+    path: '/',
+    element: <App />,
+    children: [
+      {
+        path: '',
+        element: <Home />
+      },
 
-  { path: 'books',
-    element: <BrowseBooks /> 
-  },
+      {
+        path: 'books/:category',
+        element: <BrowseBooks />
+      },
 
-  { path: 'add-book',
-     element: <AddBook /> 
-    },
+      {
+        path: 'book/:id',
+        element: <BookDetails />
+      },
+
+      {
+        path: 'books',
+        element: <BrowseBooks />
+      },
+
+      {
+        path: 'add-book',
+        element: <AddBook />
+      }, 
+      { path: '*', 
+        element: <Error /> 
+      },
     ]
   },
 ])
 
 ReactDOM.createRoot(document.getElementById('root')).render(
-  <React.StrictMode>
-    <RouterProvider router={router} />
-  </React.StrictMode>
+  <Provider store={store}>
+  <RouterProvider router={router} />
+</Provider>
 )
