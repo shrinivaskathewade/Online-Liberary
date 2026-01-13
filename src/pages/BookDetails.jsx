@@ -11,12 +11,12 @@ import { books } from "../data/books.js";
   }
 
   return (
-    <div>
-      <div className="img">
+    <div className="book-details-page">
+      <div className= "book-image-wrapper">
         <img src= {book.Cover} alt= {book.title} />
       </div>
     
-    <div style={{ padding: "20px" }}>
+    <div className="book-content">
       <h2>{book.title}</h2>
       <p><strong>Author:</strong> {book.author}</p>
       <p><strong>Category:</strong> {book.category}</p>
